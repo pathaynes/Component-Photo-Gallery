@@ -1,0 +1,33 @@
+
+body {
+    margin: 0;
+}
+
+main {
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+#logo {
+    width: 200px;
+    margin-left: 50px;
+}
+
+header {
+    background-color: rgb(232, 153, 67);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    color: white;
+}
+
+footer {
+    height: 50px;
+    background-color: rgb(232, 153, 67);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+}
