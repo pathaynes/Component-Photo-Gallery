@@ -2,7 +2,8 @@ import Component from '../src/Component.js';
 
 class CreatureItems extends Component {
     renderHTML() {
-        const hornedCreatures = this.props.creatures;
+        const hornedCreatures = this.props.hornedCreatures;
+        
         return /*html*/`
   <li>
       <h2 title="${hornedCreatures.description}">${hornedCreatures.title}</h2>

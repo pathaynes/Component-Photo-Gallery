@@ -4,15 +4,14 @@ class FilterCreatures extends Component {
     
     onRender(select) {
         const onFilter = this.props.onFilter;
-
         select.addEventListener('input', () => {
             onFilter(select.value);
         });
     }
 
     renderHTML() {
-        const creatures = this.props.creatures;
-        const types = getUniqueTypes(creatures);
+        const hornedCreatures = this.props.hornedCreatures;
+        const types = getUniqueTypes(hornedCreatures);
         const optionsHTML = renderOptionsHTML(types);
 
         return /*html*/`
@@ -24,9 +23,10 @@ class FilterCreatures extends Component {
     }
 }
 
-function getUniqueTypes(creatures) {
+
+function getUniqueTypes(hornedCreatures) {
     const hornsArray = [];
-    creatures.forEach(creatures => {
+    hornedCreatures.forEach(creatures => {
         if(!hornsArray.includes(creatures.horns)) {
             hornsArray.push(creatures.horns);
         }

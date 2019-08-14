@@ -6,7 +6,7 @@ QUnit.module('image-item-test');
 
 test('image-item-test', assert => {
     // arrange
-    const creatures = {
+    const hornedCreatures = {
         url: 'http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg',
         title: 'UniWhal',
         description: 'A unicorn and a narwhal nuzzling their horns',
@@ -23,7 +23,7 @@ test('image-item-test', assert => {
   `;
     
     // act
-    const props = { creatures: creatures };
+    const props = { hornedCreatures: hornedCreatures };
     const imageItem = new CreatureItems(props);
     const html = imageItem.renderHTML();
     

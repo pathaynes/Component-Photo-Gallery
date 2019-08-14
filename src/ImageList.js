@@ -3,9 +3,9 @@ import Component from './Component.js';
 
 class CreatureList extends Component {
     onRender(dom) {
-        const creatures = this.props.creatures;
-        creatures.forEach(creatures => {
-            const props = { creatures: creatures };
+        const hornedCreatures = this.props.hornedCreatures;
+        hornedCreatures.forEach(hornedCreatures => {
+            const props = { hornedCreatures: hornedCreatures };
             const creatureItem = new CreatureItems(props);
             const creatureItemDOM = creatureItem.renderDOM();
             dom.appendChild(creatureItemDOM);
