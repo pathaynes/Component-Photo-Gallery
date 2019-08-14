@@ -2,10 +2,15 @@ import Component from './Component.js';
 import FilterCreatures from './FilterImages.js';
 import hornedCreatures from '../data/hornedCreatures.js';
 import CreatureList from './ImageList.js';
+import Header from './Header.js';
 
 class App extends Component {
 
     onRender(dom) {
+
+        const header = new Header();
+        const headerDOM = header.renderDOM();
+        dom.prepend(headerDOM);
 
         const props = {
             hornedCreatures: hornedCreatures
@@ -20,13 +25,14 @@ class App extends Component {
             hornedCreatures: hornedCreatures,
             onFilter: (creatureHorns) => {
                 let filteredCreatures;
-                if(creatureHorns === 'all') {
+                // eslint-disable-next-line 
+                if(creatureHorns == 'all') {
                     filteredCreatures = hornedCreatures;
                 }
                 else {
                     filteredCreatures = hornedCreatures.filter(creature => {
-                      
-                        return creature.horns === creatureHorns;
+                      // eslint-disable-next-line 
+                        return creature.horns == creatureHorns;
                     });
                 }  
                 const updateProps = { hornedCreatures: filteredCreatures };
